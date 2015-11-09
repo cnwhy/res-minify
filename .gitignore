@@ -1,0 +1,14 @@
+# git ignore
+
+#folder
+/node_modules/
+/log/
+/.catchDir/
+
+#file type
+
+#file
+*.log
+**/.DS_Store
+/local.js
+!/update.sh
