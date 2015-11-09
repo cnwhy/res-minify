@@ -1,6 +1,6 @@
 {
   "name": "res-minify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "服务端实时压缩,合并'js','css'的express中间件.",
   "author": {
     "name": "cnwhy"
