@@ -1,17 +1,18 @@
 {
   "name": "res-minify",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "服务端实时压缩,合并'js','css'的express中间件.",
   "author": {
     "name": "cnwhy"
   },
   "main": "index.js",
   "scripts": {
-    "test":"node ./test/app.js"
+    "test": "node ./test/app.js"
   },
   "files": [
     "index.js",
-    "lib/*"
+    "lib/*",
+    "./*.md"
   ],
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   ],
   "dependencies": {
     "clean-css-cnwhy": "^3.4.6",
+    "less": "^2.5.3",
     "mime": "^1.3.4",
     "queue-fun": "^0.2.3",
     "uglify-js": "^2.5.0",
@@ -34,5 +36,5 @@
   "devDependencies": {
     "express": "^4.13.3"
   },
-  "license": "BSD"
+  "license": "MIT"
 }

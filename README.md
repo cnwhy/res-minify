@@ -1,4 +1,4 @@
-自动压缩合并js css, express中间件
+自动压缩合并js css,自动编译Less, express中间件
 
 demo:  
 ```
@@ -14,8 +14,9 @@ app.use("/v2",resminify(path.join(__dirname, 'public'),{"reAbsolute":true}));
 //defined
 {
     "compressCSS": true     //css压缩
-    ,"reAbsolute": false    //是否转换CSS中原有的绝对路径 (当路由不是根路径时,将原CSS根路径的URL加上当前路由;
+    ,"reAbsolute": false    //是否转换CSS中原有的绝对路径
     ,"compressJS": true     //js压缩
+    ,"compileLess": true    //编译Less文件
     ,"serverCache":true     //服务器缓存
     ,"fileMaxAge":604800    //浏览器缓存时间
     ,"cacheFilePaths": ""   //缓存目录 不设置则缓存到内存
