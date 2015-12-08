@@ -22,6 +22,7 @@ app.use("/v2",resminify(path.join(__dirname, 'public'),{"reAbsolute":true}));
     ,"cacheFilePaths": ""   //缓存目录 不设置则缓存到内存
     ,"directoryList":false  //目录浏览
     ,"defaultFile":["index.html","index.htm","default.html","default.htm"]  //默认文件,开启目录浏览后失效;
+    ,"baseUrl":undefined    //reAbsolute 转换绝对路径的时前缀,默认取值req.baseUrl
 }
 ```
 
