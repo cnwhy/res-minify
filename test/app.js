@@ -11,15 +11,16 @@ var app = express(),port = 7754
 
 
 app.use("/",resminify(path.join(__dirname, '../'),{
-  directoryList:true //开启目录浏览
-  ,cacheFilePaths: path.join(__dirname, '../.catchDir') //设置缓存目录, 不设置则缓存在内存中.
+  //directoryList: true //开启目录浏览
+  cacheFilePaths: path.join(__dirname, '../.catchDir') //设置缓存目录, 不设置则缓存在内存中.
 }))
 app.use("/web",resminify(path.join(__dirname, '../'),{
   directoryList:true //开启目录浏览
+  ,reAbsolute: true
   ,compressJS:false  //关闭JS压缩
+  ,serverCache:false
+  ,
 }))
-
-
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -35,7 +36,7 @@ app.use(function(err, req, res, next) {
       })
   }else{
     res.status(err.status || 500);
-    res.json(err);
+    res.send(err.message || err.status);
   }
   if(!err.status || err.status >= 500)  console.error(err);
 });

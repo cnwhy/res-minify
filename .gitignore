@@ -4,6 +4,7 @@
 /node_modules/
 /log/
 /.catchDir/
+/.vscode/
 
 #file type
 
